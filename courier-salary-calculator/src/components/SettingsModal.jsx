@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './SettingsModal.css';
+import React, { useEffect, useState } from "react";
+import "./SettingsModal.css";
 
 const SettingsModal = ({ closeModal, toggleTheme, theme }) => {
   const [isClosing, setIsClosing] = useState(false); // Для анимации закрытия
@@ -19,7 +19,7 @@ const SettingsModal = ({ closeModal, toggleTheme, theme }) => {
   // Закрытие модального окна при клике вне содержимого
   const handleOverlayClick = (e) => {
     // Проверяем, что клик был по фону, а не по содержимому
-    if (e.target.classList.contains('modalOverlay')) {
+    if (e.target.classList.contains("modalOverlay")) {
       handleClose();
     }
   };
@@ -34,13 +34,22 @@ const SettingsModal = ({ closeModal, toggleTheme, theme }) => {
   }, [isClosing, closeModal]);
 
   return (
-    <div className={`modalOverlay ${isClosing ? 'closing' : ''} ${isOpening ? 'opening' : ''}`} onClick={handleOverlayClick}>
-      <div className={`modalContent ${isClosing ? 'closing' : ''} ${isOpening ? 'opening' : ''}`}>
+    <div
+      className={`modalOverlay ${isClosing ? "closing" : ""} ${
+        isOpening ? "opening" : ""
+      }`}
+      onClick={handleOverlayClick}
+    >
+      <div
+        className={`modalContent ${isClosing ? "closing" : ""} ${
+          isOpening ? "opening" : ""
+        }`}
+      >
         <h2>Настройки</h2>
         <div className="themeToggle">
           <label>Тема:</label>
           <button onClick={toggleTheme}>
-            {theme === 'light' ? 'Тёмная' : 'Светлая'}
+            {theme === "light" ? "Тёмная" : "Светлая"}
           </button>
         </div>
         <footer className="modalFooter">

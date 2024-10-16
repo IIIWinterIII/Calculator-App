@@ -1,169 +1,200 @@
 * {
-    border: 1px solid greenyellow;
+  border: 1px solid greenyellow;
 }
 
 :root {
-    --background-light: #fff;
-    --text-light: #000;
-    --background-dark: #333;
-    --text-dark: #fff;
-    --button-bg: #4CAF50;
-    --button-text: #fff;
-    --button-settings-bg: #555;
-    --button-settings-text: #fff;
-    --delete-button-bg: #ff4d4d;
-    --delete-button-text: #fff;
-  }
-  
-  /* Светлая тема */
-  .container.light {
-    background-color: var(--background-light);
-    color: var(--text-light);
-  }
-  
-  /* Тёмная тема */
-  .container.dark {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-  }
-  
-  /* Общие стили */
-  .container {
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    min-height: 100vh; /* Чтобы футер был внизу */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: background-color 0.5s, color 0.5s;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .title {
-    font-size: 34px;
-    font-weight: bold;
-  }
-  
-  .addButton,
-  .settingsButton,
-  .trashButton {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .settingsButton,
-  .trashButton {
-    background-color: transparent;
-    color: var(--button-settings-text);
-    /* font-size: 20px; */
-  }
+  --background-light: #fff;
+  --text-light: #000;
+  --background-dark: #333;
+  --text-dark: #fff;
+  --button-bg: #4caf50;
+  --button-text: #fff;
+  --button-settings-bg: #555;
+  --button-settings-text: #fff;
+  --delete-button-bg: #ff4d4d;
+  --delete-button-text: #fff;
+}
 
-  .trashButton {
-    font-size: 10px;
-    width: 80px;
-    height: auto;
-    background-color: #f44336d7;
-    padding: 5px;
-  }
-  
-  .content {
-    margin-top: 20px;
-    flex: 1;
-    
-  }
-  
-  .noShiftsText {
-    text-align: center;
-    font-size: 18px;
-    color: #777;
-  }
-  
-  /* Стили для футера */
-  footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #777;
-    font-family: sans-serif;
-    font-size: 1em;
-  }
-  
-  /* Стили модального окна */
-  .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modalContent {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Если поддерживаете тёмную тему в модальном окне */
-  .container.dark .modalContent {
-    background-color: #444;
-    color: #fff;
-  }
-  
-  .modalContent h2 {
-    margin-bottom: 20px;
-  }
-  
-  .themeToggle {
-    margin-bottom: 20px;
-  }
-  
-  .themeToggle label {
-    margin-right: 10px;
-  }
-  
-  .modalFooter {
-    margin-top: 20px;
-  }
-  
-  .closeButton {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .icon {
-    font-size: 1.5em; /* Размер иконки */
-  }
-  
-  .icon.light {
-    color: black; /* Цвет для светлой темы */
-  }
-  
-  .icon.dark {
-    color: white; /* Цвет для тёмной темы */
-  }
-  
-  
+/* Светлая тема */
+.container.light {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+/* Тёмная тема */
+.container.dark {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Общие стили */
+.container {
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh; /* Чтобы футер был внизу */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.addButton,
+.settingsButton,
+.trashButton {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.addButton:hover {
+  background-color: #3c8d40;
+}
+
+.settingsButton,
+.trashButton {
+  background-color: transparent;
+  color: var(--button-settings-text);
+  /* font-size: 20px; */
+}
+
+.content {
+  margin-top: 20px;
+  flex: 1;
+}
+
+.noShiftsText {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Стили для футера */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+/* Стили модального окна */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Если поддерживаете тёмную тему в модальном окне */
+.container.dark .modalContent {
+  background-color: #444;
+  color: #fff;
+}
+
+.modalContent h2 {
+  margin-bottom: 20px;
+}
+
+.themeToggle {
+  margin-bottom: 20px;
+}
+
+.themeToggle label {
+  margin-right: 10px;
+}
+
+.modalFooter {
+  margin-top: 20px;
+}
+
+.closeButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.shiftCard {
+  border: 1px solid #ccc; /* Рамка */
+  border-radius: 5px; /* Закругление углов */
+  padding: 10px; /* Отступы внутри карточки */
+  margin: 10px 0; /* Отступы между карточками */
+  background-color: #f9f9f9; /* Цвет фона карточки */
+  display: flex;
+  justify-content: space-between; /* Распределить контент по краям */
+  align-items: center; /* Вертикальное выравнивание */
+  cursor: pointer; /* Указатель как нажатие */
+}
+
+.shiftCard:hover {
+  background-color: #e0e0e0; /* Легкое затемнение при наведении */
+}
+
+.textInCard {
+  width: 90%;
+  margin: 0 10px;
+}
+
+.trashButton {
+  background-color: #f44336d7;
+  color: var(--delete-button-text);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.trashButton:hover {
+  background-color: #ff2d2d;
+}
+
+.icon {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.icon.light {
+  color: black; /* Цвет для светлой темы */
+}
+
+.icon.dark {
+  color: white; /* Цвет для тёмной темы */
+}

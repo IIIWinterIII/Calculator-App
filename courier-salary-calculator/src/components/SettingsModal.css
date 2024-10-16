@@ -73,11 +73,5 @@
     cursor: pointer;
   }
   
-  .shiftCard {
-    border: 1px solid #ccc; /* Рамка */
-    border-radius: 5px; /* Закругление углов */
-    padding: 10px; /* Отступы внутри карточки */
-    margin: 10px 0; /* Отступы между карточками */
-    background-color: #f9f9f9; /* Цвет фона карточки */
-  }
+ 
   
