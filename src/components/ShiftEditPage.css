@@ -1,3 +1,14 @@
+.disabled_scroll {
+    -webkit-appearance: none; /* Убирает спиннеры для WebKit (Chrome, Safari, Edge) */
+    -moz-appearance: textfield; /* Убирает спиннеры для Firefox */
+    appearance: none; /* Для браузеров, поддерживающих стандартное свойство */
+  }
+  
+  .disabled_scroll::-webkit-inner-spin-button {
+    display: none; /* Убирает спиннеры в Chrome */
+  }
+  
+
 /* Общий контейнер */
 .containerEditPage {
   max-width: 600px;
@@ -10,14 +21,31 @@
 
 /* Заголовок */
 h3 {
+  padding-bottom: 5px;
   font-size: 1.8em;
   color: #333; /* Тёмный цвет текста */
+  position: relative; /* Убедитесь, что элемент имеет относительное позиционирование */
+  border-bottom: 1px solid rgb(161, 159, 159);
+}
+
+h3::after {
+  content: ""; /* Обязательно указываем content для псевдоэлемента */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px; /* Расстояние от нижней границы */
+  height: 7px; /* Высота тени */
+  background: rgba(0, 0, 0, 0.1); /* Цвет тени */
+  filter: blur(5px); /* Размытие для эффекта тени */
 }
 
 /* Форма */
 .form {
-  width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(161, 159, 159);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .form label {
@@ -25,13 +53,16 @@ h3 {
   font-size: 1.1em;
   color: #555;
   margin-bottom: 5px; /* Отступ между label и input */
+  padding-left: 5px;
 }
 
 .formInput {
   width: 100%; /* Ширина поля на всю ширину контейнера */
   padding: 10px;
+  margin: 5px;
   font-size: 1em;
   border: 1px solid #ccc; /* Серый цвет рамки */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
   border-radius: 5px; /* Скругление углов input */
   transition: border-color 0.3s; /* Плавный переход при фокусе */
   box-sizing: border-box;
@@ -43,25 +74,27 @@ h3 {
 }
 
 .input3AndP {
-    display: flex;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  height: 100%;
+  display: flex;
+  height: 50%;
+}
+
+.stakeAndInput {
+  width: 100%;
+  margin-top: 10px;
+  border-top: 1px solid rgb(161, 159, 159);
 }
 
 .inputN3 {
-    /* height: 100%; */
-    width: 20%;
-    padding: 10px;
+  width: 20%;
+  padding: 10px;
   font-size: 1em;
   border: 1px solid #ccc; /* Серый цвет рамки */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
   border-radius: 5px; /* Скругление углов input */
   transition: border-color 0.3s; /* Плавный переход при фокусе */
   box-sizing: border-box;
   text-align: center;
-} 
-
-
+}
 
 .dubleInput {
   display: flex;
@@ -93,7 +126,6 @@ h3 {
 /* Кнопка "Назад" */
 .backButton:first-of-type {
   background-color: #6c757d; /* Серый фон */
-  margin-bottom: 20px; /* Отступ снизу */
 }
 
 .backButton:first-of-type:hover {

@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import "./App.css";
 import SettingsModal from "./components/SettingsModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +27,8 @@ const App = () => {
 
   // Сохраняем смены в localStorage при изменении массива shifts
   useEffect(() => {
-    if (shifts.length > 0) { // Добавляем проверку, чтобы не сохранять пустой массив
+    if (shifts.length > 0) {
+      // Добавляем проверку, чтобы не сохранять пустой массив
       localStorage.setItem("shifts", JSON.stringify(shifts)); // Сохраняем смены в localStorage
     }
   }, [shifts]);
@@ -41,16 +47,20 @@ const App = () => {
   };
 
   // Вставьте этот код в App.jsx
-const formatDate = (date) => {
-  const options = { weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
-  const formattedDate = new Date(date).toLocaleDateString("ru-RU", options);
-  
-  const parts = formattedDate.split(', '); 
-  parts[0] = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
+  const formatDate = (date) => {
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    };
+    const formattedDate = new Date(date).toLocaleDateString("ru-RU", options);
 
-  return parts.join(', '); 
-};
+    const parts = formattedDate.split(", ");
+    parts[0] = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
 
+    return parts.join(", ");
+  };
 
   const addShift = () => {
     const newShift = {
@@ -101,7 +111,8 @@ const formatDate = (date) => {
               >
                 <div className="textInCard">
                   <p style={{ fontSize: "0.8em", color: "#888" }}>
-                    {formatDate(shift.createdDate)} {/* Показываем дату создания */}
+                    {formatDate(shift.createdDate)}{" "}
+                    {/* Показываем дату создания */}
                   </p>
                   <h3>Карточка номер {shift.number}</h3>
                 </div>
