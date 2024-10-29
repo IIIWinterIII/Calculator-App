@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.7401facd.css",
-    "main.js": "./static/js/main.dc15cdb4.js",
-    "static/js/453.f2f4ee96.chunk.js": "./static/js/453.f2f4ee96.chunk.js",
-    "service-worker.js": "./service-worker.js",
-    "index.html": "./index.html",
-    "main.7401facd.css.map": "./static/css/main.7401facd.css.map",
-    "main.dc15cdb4.js.map": "./static/js/main.dc15cdb4.js.map",
-    "453.f2f4ee96.chunk.js.map": "./static/js/453.f2f4ee96.chunk.js.map"
+    "main.css": "/IIIWinterIII/Calculator-App/static/css/main.7401facd.css",
+    "main.js": "/IIIWinterIII/Calculator-App/static/js/main.fec77f45.js",
+    "static/js/453.f2f4ee96.chunk.js": "/IIIWinterIII/Calculator-App/static/js/453.f2f4ee96.chunk.js",
+    "service-worker.js": "/IIIWinterIII/Calculator-App/service-worker.js",
+    "index.html": "/IIIWinterIII/Calculator-App/index.html",
+    "main.7401facd.css.map": "/IIIWinterIII/Calculator-App/static/css/main.7401facd.css.map",
+    "main.fec77f45.js.map": "/IIIWinterIII/Calculator-App/static/js/main.fec77f45.js.map",
+    "453.f2f4ee96.chunk.js.map": "/IIIWinterIII/Calculator-App/static/js/453.f2f4ee96.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7401facd.css",
-    "static/js/main.dc15cdb4.js"
+    "static/js/main.fec77f45.js"
   ]
 }
