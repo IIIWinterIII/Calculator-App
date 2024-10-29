@@ -1,9 +1,8 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders shift title', () => {
+  render(<App />); // Убери act, так как это не нужно
+  const titleElement = screen.getByText(/Смены/i); // Обнови на актуальный текст
+  expect(titleElement).toBeInTheDocument();
 });
