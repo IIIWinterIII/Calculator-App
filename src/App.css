@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid greenyellow;
-}
+} */
 
 :root {
   --background-light: #fff;
@@ -16,18 +16,26 @@
 }
 
 /* Светлая тема */
-.container.light, .containerEditPage.light {
+.container.light {
   background-color: var(--background-light);
   color: var(--text-light);
 }
 
 /* Тёмная тема */
-.container.dark, .containerEditPage.dark {
+.container.dark {
   background-color: var(--background-dark);
   color: var(--text-dark);
 }
 
 /* Общие стили */
+
+.container, 
+.container h1,
+.container 
+{
+  transition: background-color 0.5s, color 0.5s;
+}
+
 .container {
   padding: 10px 20px;
   font-family: Arial, sans-serif;
@@ -37,18 +45,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: background-color 0.5s, color 0.5s;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .title {
   font-size: 34px;
   font-weight: bold;
+  border-bottom: 2px solid rgb(132, 132, 132);
+  min-width: 40%;
+  text-align: center;
 }
 
 .addButton,
@@ -124,6 +135,8 @@ footer {
   color: #fff;
 }
 
+
+
 .modalContent h2 {
   margin-bottom: 20px;
 }
@@ -147,41 +160,6 @@ footer {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.shiftCard {
-  border: 1px solid #ccc; /* Рамка */
-  border-radius: 5px; /* Закругление углов */
-  padding: 10px; /* Отступы внутри карточки */
-  margin: 10px 0; /* Отступы между карточками */
-  background-color: #f9f9f9; /* Цвет фона карточки */
-  display: flex;
-  justify-content: space-between; /* Распределить контент по краям */
-  align-items: center; /* Вертикальное выравнивание */
-  cursor: pointer; /* Указатель как нажатие */
-}
-
-.shiftCard:hover {
-  background-color: #e0e0e0; /* Легкое затемнение при наведении */
-}
-
-.textInCard {
-  width: 90%;
-  margin: 0 10px;
-}
-
-.trashButton {
-  background-color: #f44336d7;
-  color: var(--delete-button-text);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.trashButton:hover {
-  background-color: #ff2d2d;
 }
 
 .icon {

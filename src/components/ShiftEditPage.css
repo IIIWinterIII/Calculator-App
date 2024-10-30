@@ -25,7 +25,6 @@
 h3 {
   padding-bottom: 5px;
   font-size: 1.8em;
-  color: #333; /* Тёмный цвет текста */
   position: relative; /* Убедитесь, что элемент имеет относительное позиционирование */
   border-bottom: 1px solid rgb(161, 159, 159);
 }
