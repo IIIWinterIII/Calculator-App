@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom"; // Уберите BrowserRouter
 import "./App.css";
 import SettingsModal from "./components/SettingsModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import ShiftEditPage from "./components/ShiftEditPage"; // Импорт страницы редактирования
+
 
 const App = () => {
   const [shifts, setShifts] = useState([]);
@@ -152,14 +148,12 @@ const App = () => {
 // Обертка для маршрутизации
 const AppRouter = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/edit-shift/:id" element={<ShiftEditPage />} />
-        {/* Маршрут для несуществующих страниц */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/edit-shift/:id" element={<ShiftEditPage />} />
+      {/* Маршрут для несуществующих страниц */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };
 
