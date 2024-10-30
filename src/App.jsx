@@ -26,6 +26,8 @@ const App = () => {
     if (shifts.length > 0) {
       // Добавляем проверку, чтобы не сохранять пустой массив
       localStorage.setItem("shifts", JSON.stringify(shifts)); // Сохраняем смены в localStorage
+    } else {
+      localStorage.removeItem("shifts"); // Очищаем localStorage, если массив пуст
     }
   }, [shifts]);
 
