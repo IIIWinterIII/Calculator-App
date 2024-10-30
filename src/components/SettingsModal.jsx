@@ -49,7 +49,7 @@ const SettingsModal = ({ closeModal, toggleTheme, theme }) => {
         <div className="themeToggle">
           <label>Тема:</label>
           <button onClick={toggleTheme}>
-            {theme === "light" ? "Тёмная" : "Светлая"}
+            {theme === "light" ? "Светлая" : "Тёмная"}
           </button>
         </div>
         <footer className="modalFooter">

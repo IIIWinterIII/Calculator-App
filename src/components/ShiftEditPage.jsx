@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ShiftEditPage.css"; // Импорт CSS стилей
 
-const ShiftEditPage = () => {
+const ShiftEditPage = ({ theme }) => {
   const { id } = useParams(); // Получаем ID смены из URL
   const navigate = useNavigate();
   const [shift, setShift] = useState(null);
@@ -131,7 +131,7 @@ const ShiftEditPage = () => {
   };
 
   return (
-    <div className="containerEditPage">
+    <div className={`containerEditPage ${theme}`}>
       <button onClick={handleBack} className="backButton">
         Назад
       </button>

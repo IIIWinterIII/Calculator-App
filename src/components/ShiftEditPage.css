@@ -17,6 +17,8 @@
   background-color: #f9f9f9; /* Светлый фон */
   border-radius: 8px; /* Скругленные углы */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  transition: background-color 0.5s, color 0.5s;
+
 }
 
 /* Заголовок */

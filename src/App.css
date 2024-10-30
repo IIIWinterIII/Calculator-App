@@ -16,13 +16,13 @@
 }
 
 /* Светлая тема */
-.container.light {
+.container.light, .containerEditPage.light {
   background-color: var(--background-light);
   color: var(--text-light);
 }
 
 /* Тёмная тема */
-.container.dark {
+.container.dark, .containerEditPage.dark {
   background-color: var(--background-dark);
   color: var(--text-dark);
 }
